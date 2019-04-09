@@ -15,6 +15,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav navbar-right">
                 <!-- Authentication Links -->
+                @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">
                         登录
@@ -25,6 +26,33 @@
                         注册
                     </a>
                 </li>
+                @else
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        <img class="img-responsive img-circle" height="30px" src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" width="30px">
+                            {{ Auth::user()->name }}
+                        </img>
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item" href="">
+                            个人中心
+                        </a>
+                        <a class="dropdown-item" href="">
+                            编辑资料
+                        </a>
+                        <div class="dropdown-divider">
+                        </div>
+                        <a class="dropdown-item" href="#" id="logout">
+                            <form action="{{ route('logout') }}" method="POST">
+                                {{ csrf_field() }}
+                                <button class="btn btn-block btn-danger" name="button" type="submit">
+                                    退出
+                                </button>
+                            </form>
+                        </a>
+                    </div>
+                </li>
+                @endguest
             </ul>
         </div>
     </div>
