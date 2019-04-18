@@ -34,10 +34,10 @@
                         </img>
                     </a>
                     <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                        <a class="dropdown-item" href="">
+                        <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
                             个人中心
                         </a>
-                        <a class="dropdown-item" href="">
+                        <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
                             编辑资料
                         </a>
                         <div class="dropdown-divider">
