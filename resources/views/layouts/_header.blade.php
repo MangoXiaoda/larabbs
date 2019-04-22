@@ -29,7 +29,7 @@
                 @else
                 <li class="nav-item dropdown">
                     <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
-                        <img class="img-responsive img-circle" height="30px" src="https://iocaffcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" width="30px">
+                        <img class="img-responsive img-circle" height="30px" src="{{ Auth::user()->avatar }}" width="30px">
                             {{ Auth::user()->name }}
                         </img>
                     </a>
