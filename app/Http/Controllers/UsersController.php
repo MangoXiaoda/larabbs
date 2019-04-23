@@ -11,6 +11,12 @@ class UsersController extends Controller
 {
 
 
+    // 限制未登录用户访问
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
+
 
     // 个人资料展示
     public function show(User $user)
@@ -21,12 +27,14 @@ class UsersController extends Controller
     // 修改
     public function edit(User $user)
     {
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     // 更新
     public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
     {
+        $this->authorize('update', $user);
         $data = $request->all();
 
         if ($request->avatar) {
