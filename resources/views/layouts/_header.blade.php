@@ -60,15 +60,21 @@
                     </a>
                     <div aria-labelledby="navbarDropdown" class="dropdown-menu">
                         <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
+                            <i class="far fa-user mr-2">
+                            </i>
                             个人中心
                         </a>
+                        <div class="dropdown-divider">
+                        </div>
                         <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
+                            <i class="far fa-edit mr-2">
+                            </i>
                             编辑资料
                         </a>
                         <div class="dropdown-divider">
                         </div>
                         <a class="dropdown-item" href="#" id="logout">
-                            <form action="{{ route('logout') }}" method="POST">
+                            <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('您确定要退出吗？');">
                                 {{ csrf_field() }}
                                 <button class="btn btn-block btn-danger" name="button" type="submit">
                                     退出
