@@ -20,9 +20,10 @@ class TopicObserver
     }
 
     // 当数据保存时更新 excerpt 字段
-    public function saveing(Topic $topic)
+    public function saving(Topic $topic)
     {
-       $topic->excerpt = make_excerpt($topic->body);
+        $topic->body = clean($topic->body, 'user_topic_body');
+        $topic->excerpt = make_excerpt($topic->body);
     }
 
 
