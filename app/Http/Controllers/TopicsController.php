@@ -23,6 +23,7 @@ class TopicsController extends Controller
 		return view('topics.index', compact('topics'));
 	}
 
+    // 帖子详情页
     public function show(Topic $topic)
     {
         return view('topics.show', compact('topic'));
