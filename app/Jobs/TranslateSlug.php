@@ -39,7 +39,7 @@ class TranslateSlug implements ShouldQueue
         $slug = app(SlugTranslateHandler::class)->translate($this->topic->title);
 
         // 为了避免模型监控器死循环调用，我们使用 DB 类直接对数据库进行操作
-        \DB::table('topic')->where('id', $this->topic->id)->update(['slug' => $slug]);
+        \DB::table('topics')->where('id', $this->topic->id)->update(['slug' => $slug]);
     }
 
 }
