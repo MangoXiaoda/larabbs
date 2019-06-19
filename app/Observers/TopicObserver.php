@@ -49,6 +49,12 @@ class TopicObserver
         }
     }
 
+    // 当话题被删除时，话题下的恢复一律删除
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
+    }
+
 
 
 }
