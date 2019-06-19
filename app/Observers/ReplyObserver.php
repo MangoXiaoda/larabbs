@@ -32,6 +32,9 @@ class ReplyObserver
     // 删除评论时 更新评论数
     public function deleted(Reply $reply)
     {
+        // if ($reply->topic->reply_count > 0) {
+        //     $reply->topic->decrement('reply_count', 1);
+        // }
         $reply->topic->updateReplyCount();
     }
 }
