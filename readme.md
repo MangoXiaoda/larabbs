@@ -14,7 +14,6 @@ LaraBBS 是一个简洁的论坛应用.
 - 文章发布时自动 Slug 翻译，支持使用队列方式以提高响应；
 - 站点『活跃用户』计算，一小时计算一次；
 - 多角色权限管理 —— 允许站长，管理员权限的存在；
-- 后台管理 —— 后台数据模型管理；
 - 邮件通知 —— 发送新回复邮件通知，队列发送邮件；
 - 站内通知 —— 话题有新回复；
 - 自定义 Artisan 命令行 —— 自定义活跃用户计算命令；
@@ -24,7 +23,7 @@ LaraBBS 是一个简洁的论坛应用.
 
 ## 开发环境部署/安装
 
-本项目代码使用 PHP 框架 [Laravel 5.5](https://d.laravel-china.org/docs/5.5/) 开发，本地开发环境使用 [Laravel Homestead](https://d.laravel-china.org/docs/5.5/homestead)。
+本项目代码使用 PHP 框架 [Laravel 5.7] 开发，本地开发环境使用 [Laravel Homestead]
 
 下文将在假定读者已经安装好了 Homestead 的情况下进行说明。如果您还未安装 Homestead，可以参照 [Homestead 安装与设置](https://laravel-china.org/docs/5.5/homestead#installation-and-setup) 进行安装配置。
 
@@ -34,7 +33,7 @@ LaraBBS 是一个简洁的论坛应用.
 
 克隆 `larabbs` 源代码到本地：
 
-    > git clone git@github.com:summerblue/larabbs.git
+    > git clone https://github.com/MangoXiaoda/larabbs.git
 
 #### 2. 配置本地的 Homestead 环境
 
