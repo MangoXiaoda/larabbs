@@ -566,7 +566,7 @@
 
 "@fortawesome/fontawesome-free@^5.8.1":
   version "5.8.1"
-  resolved "http://r.cnpmjs.org/@fortawesome/fontawesome-free/download/@fortawesome/fontawesome-free-5.8.1.tgz#cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b"
+  resolved "https://r.cnpmjs.org/@fortawesome/fontawesome-free/download/@fortawesome/fontawesome-free-5.8.1.tgz#cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -749,8 +749,8 @@ acorn-dynamic-import@^4.0.0:
   resolved "http://registry.npm.taobao.org/acorn-dynamic-import/download/acorn-dynamic-import-4.0.0.tgz#482210140582a36b83c3e342e1cfebcaa9240948"
 
 acorn@^6.0.5:
-  version "6.1.1"
-  resolved "http://registry.npm.taobao.org/acorn/download/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
 
 adjust-sourcemap-loader@^1.1.0:
   version "1.2.0"
